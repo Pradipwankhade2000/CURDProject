@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.thymeleaf.org">
+	<head>
+		<title> EditUser </title>
+		
+		 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	<body>
+		<div align="center">
+			<h2> Edit User Form </h2> <br> 
+			
+			<form action="#" th:action="@{/saveuser}" th:object="${UserClass}" method="post" >
+				
+				<table border="0" cellpadding="10">
+					
+					<tr>
+						<td> First Name</td>
+						<td><input type="text" th:field="*{firstname}" /></td>						
+					</tr>
+					
+					<tr>
+						<td> Last Name</td>
+						<td><input type="text" th:field="*{lastname}" /></td>						
+					</tr>
+					
+					<tr>
+						<td> Age </td>
+						<td><input type="number" th:field="*{age}" /></td>						
+					</tr>
+					
+					<tr>
+						<td>Distric : </td>
+						<td><input type="text" th:field="*{distric}" /></td>						
+					</tr>
+					
+					<tr>
+						<td></td>
+					<td colspan="2"><button type="submit" class="btn btn-secondary">Save</button></td>
+				</tr>
+				</table>			
+			</form>
+		</div>
+	</body>
